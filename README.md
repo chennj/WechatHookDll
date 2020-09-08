@@ -8,5 +8,6 @@
 我用的pc微信的版本是2.6.6.28, 如果版本不同的话需要自己找到call的基址
 
 使用方法<br>
-注入Debug文件夹里的WechatDllCpp.dll到微信进程<br>
+先使用visal studio 2015 生成WechatDllCpp.dll<br>
+注入WechatDllCpp.dll到微信进程<br>
 目前完成的有：发送文本，发送图片，接收消息
