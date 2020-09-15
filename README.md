@@ -10,4 +10,4 @@
 使用方法<br>
 先使用visal studio 2015 生成WechatDllCpp.dll<br>
 注入WechatDllCpp.dll到微信进程<br>
-目前完成的有：发送文本，发送图片，接收消息
+目前完成的有：发送文本，发送图片，接收消息，获取好友/群列表

@@ -3,10 +3,11 @@
 #include "WechatDllCpp.h"
 #include <stdio.h>
 #include "resource1.h"
-#include "inc.h"
 #include <Windows.h>
 #include "httpServer.h"
 #include "RecvMessage.h"
+#include "FriendListBTree.h"
+#include "inc.h"
 
 INT_PTR CALLBACK Dlgproc(
 	HWND hwnd,
@@ -54,6 +55,7 @@ INT_PTR CALLBACK Dlgproc(
 	{
 	case WM_INITDIALOG:
 		::CheckRadioButton(hwnd, IDC_RADIO1, IDC_RADIO2, IDC_RADIO1);//程序启动时默认为单选按钮1选中
+		InitFriendListControl(hwnd);
 		break;
 	case WM_CLOSE:
 		//EndDialog(hwnd, 0);
@@ -85,6 +87,10 @@ INT_PTR CALLBACK Dlgproc(
 			::CheckRadioButton(hwnd, IDC_RADIO1, IDC_RADIO3, IDC_RADIO3);
 			m_radio = 1;
 			//MessageBoxA(hwnd, "图片", "提示", 0);
+		}
+
+		if (wParam == IDC_BUTTON_HOOK) {
+			GetFriendList();
 		}
 		break;
 	}

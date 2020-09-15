@@ -4,9 +4,9 @@
 #include <string>
 #include <stdio.h>
 #include "malloc.h"
-#include "inc.h"
 #include <atlbase.h>
 #include <atlconv.h>
+#include "inc.h"
 
 #define ReciveMessageParam 0x1131AF8		//接收消息的参数偏移
 
@@ -16,10 +16,6 @@ DWORD RECV_ESP;
 DWORD dwParam = GetModuleWeChatWinAddress() + ReciveMessageParam;
 
 HWND hWxZhuShouDlg;
-
-struct WxRecvMessage {
-
-};
 
 std::wstring GetMsgByAddress(DWORD memAddress)
 {
