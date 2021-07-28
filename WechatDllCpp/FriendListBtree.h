@@ -2,25 +2,6 @@
 #include "stdafx.h"
 #include  <list>
 
-#define HOOK_COMMAND_LEN 5
-
-//发送消息函数的偏移量
-#define SEND_CALL_RL_ADDRESS 0x2DA2D7
-
-//发送消息函数的偏移量
-#define WECHAT_SEND_MSG_CALL_RL_ADDRESS 0x2DA0F0
-//#define WECHAT_SEND_MSG_CALL_RL_ADDRESS 0x2990320
-
-//微信收消息的回调call
-#define WECHAT_RECV_MSG_CALL_RL_ADDRESS 0x305753
-
-
-//数据基址
-#define WXADDR_DATA_BASE *((PDWORD)(WECHAT_WIN_BASE+0x113227C))
-
-//群组链表入口
-#define WXADDR_ALL_GROUPS (WECHAT_WIN_BASE+0x678+0x64)
-
 #pragma region 结构体部分
 
 

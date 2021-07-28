@@ -92,6 +92,15 @@ INT_PTR CALLBACK Dlgproc(
 		if (wParam == IDC_BUTTON_HOOK) {
 			GetFriendList();
 		}
+
+		if (wParam == IDC_BUTTON_ISLOGIN) {
+			if (CheckWxIsOnline()) {
+				SetWindowText(GetDlgItem(hwnd, IDC_STATIC_ISLOGIN), L"在线");
+			}
+			else {
+				SetWindowText(GetDlgItem(hwnd, IDC_STATIC_ISLOGIN), L"离线");
+			}
+		}
 		break;
 	}
 

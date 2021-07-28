@@ -126,7 +126,6 @@ std::list<WxUser> GetFriendList()
 		if (now == -1)
 			continue;
 
-		//ListView_SetItem(hwnd_list, &lvI);
 		ListView_SetItemText(hwnd_list, now, 0, wxId.buffer);
 		ListView_SetItemText(hwnd_list, now, 1, account.buffer);
 		ListView_SetItemText(hwnd_list, now, 2, nickname.buffer);

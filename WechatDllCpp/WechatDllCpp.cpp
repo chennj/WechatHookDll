@@ -136,12 +136,3 @@ VOID sendPicMessage(wchar_t * wxid, wchar_t * filepath)
 	}
 }
 
-//修改好友备注
-VOID editNick(wchar_t * wxid, wchar_t * nick)
-{
-	__asm {
-		push 0x0
-
-	}
-}
-

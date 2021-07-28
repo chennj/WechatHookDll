@@ -5,22 +5,23 @@
 #include "stdafx.h"
 #include "mongoose.h"
 #include "WechatDllCpp.h"
+#include "inc.h"
 
 static const char *s_http_port = "2019";
 static struct mg_serve_http_opts s_http_server_opts;
 void httpServer();
 
 
-wchar_t * UTF8ToUnicode(const char* str)
-{
-	int    textlen = 0;
-	wchar_t * result;
-	textlen = MultiByteToWideChar(CP_UTF8, 0, str, -1, NULL, 0);
-	result = (wchar_t *)malloc((textlen + 1) * sizeof(wchar_t));
-	memset(result, 0, (textlen + 1) * sizeof(wchar_t));
-	MultiByteToWideChar(CP_UTF8, 0, str, -1, (LPWSTR)result, textlen);
-	return    result;
-}
+//wchar_t * UTF8ToUnicode(const char* str)
+//{
+//	int    textlen = 0;
+//	wchar_t * result;
+//	textlen = MultiByteToWideChar(CP_UTF8, 0, str, -1, NULL, 0);
+//	result = (wchar_t *)malloc((textlen + 1) * sizeof(wchar_t));
+//	memset(result, 0, (textlen + 1) * sizeof(wchar_t));
+//	MultiByteToWideChar(CP_UTF8, 0, str, -1, (LPWSTR)result, textlen);
+//	return    result;
+//}
 
 static void send(struct mg_connection *nc, struct http_message *hm) {
 	wchar_t wxid[0x100], msg[0x200];
